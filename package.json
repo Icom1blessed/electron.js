@@ -1,0 +1,29 @@
+{
+  
+  "name": "electron-testme",
+  "version": "1.0.0",
+  "description": "this is a testapp",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "migrate": "knex migrate:latest --knexfile knexfile.js"
+  },
+  "author": "icom coder",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^32.1.2"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "better-sqlite3": "^11.3.0",
+    "electron-reload": "^2.0.0-alpha.1",
+    "electron-store": "^10.0.0",
+    "electronmon": "^2.0.3",
+    "knex": "^3.1.0",
+    "mongodb": "^6.9.0",
+    "mongoose": "^8.7.0",
+    "node-fetch": "^3.3.2",
+    "sqlite3": "^5.1.7"
+  }
+}

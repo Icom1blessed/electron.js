@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="myform">
+        <input type="text" id="name" placeholder="Enter name">
+        <button type="submit">submit</button>
+
+    </form>
+
+
+
+    <a href="./index.html">home</a>
+
+
+    
+    <script src="./Renderer.js"></script>
+    <script src="./Main.js"></script>
+     <!-- <script src="./Preload.js"></script> -->
+
+    <script>
+        const form = document.getElementById('myForm');
+      
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          
+          // Collect form data
+          const name = document.getElementById('name').value;
+      
+          // Send data to the main process via ipcRenderer
+          window.electronAPI.sendFormData({ name });
+        });
+      </script>
+</body>
+</html>
